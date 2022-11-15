@@ -19,6 +19,30 @@
             <local:EditUserView />
         </DataTemplate>
         <!--End User-->
+        
+        <!--Begin Category-->
+        <DataTemplate DataType="{x:Type viewModel:CategoryViewModel}">
+            <local:CategoryView />
+        </DataTemplate>
+        <DataTemplate DataType="{x:Type viewModel:CreateCategoryViewModel}">
+            <local:CreateCategoryView />
+        </DataTemplate>
+        <DataTemplate DataType="{x:Type viewModel:EditCategoryViewModel}">
+            <local:EditCategoryView />
+        </DataTemplate>
+        <!--End Category-->
+
+        <!--Begin Product--> 
+        <DataTemplate DataType="{x:Type viewModel:ProductViewModel}">
+            <local:ProductView />
+        </DataTemplate>
+        <DataTemplate DataType="{x:Type viewModel:CreateProductViewModel}">
+            <local:CreateProductView />
+        </DataTemplate>
+        <DataTemplate DataType="{x:Type viewModel:EditProductViewModel}">
+            <local:EditProductView />
+        </DataTemplate>
+         <!--End Product-->
 
     </Window.Resources>
     <!--Here previous code...
@@ -84,7 +108,7 @@ get previous code in previous tutorial-->
                     </RadioButton>
 
                     <RadioButton Style="{StaticResource menuButton}" Tag="{StaticResource color4}"
-                        >
+                         Command="{Binding ShowProductViewCommand}">
                         <StackPanel Orientation="Horizontal">
                             <fa:IconImage Icon="ShoppingBag" Style="{StaticResource menuButtonIcon}" />
                             <TextBlock Text="Product" Style="{StaticResource menuButtonText}" />
@@ -92,7 +116,7 @@ get previous code in previous tutorial-->
                     </RadioButton>
 
                     <RadioButton Style="{StaticResource menuButton}" Tag="{StaticResource color5}"
-                        >
+                        Command="{Binding ShowCategoryViewCommand}">
                         <StackPanel Orientation="Horizontal">
                             <fa:IconImage Icon="Box" Style="{StaticResource menuButtonIcon}" />
                             <TextBlock Text="Category" Style="{StaticResource menuButtonText}" />
@@ -128,17 +152,17 @@ get previous code in previous tutorial-->
                     <!--Control bar-->
                     <StackPanel x:Name="pnlControlBar" Grid.Row="0" Orientation="Horizontal" FlowDirection="RightToLeft"
                         Background="Transparent" Margin="0,0,5,0">
-                        <Button x:Name="btnClose" Style="{StaticResource controlButton}" Tag="{StaticResource color4}">
+                        <Button x:Name="btnClose" Style="{StaticResource controlButton}" Tag="{StaticResource color4}" Click="btnClose_Click">
                             <fa:IconImage Icon="XingSquare" Style="{StaticResource controlButtonIcon}" />
 
                         </Button>
                         <Button x:Name="btnMaximize" Style="{StaticResource controlButton}"
-                            Tag="{StaticResource color6}">
+                            Tag="{StaticResource color6}" Click="btnMaximize_Click">
                             <fa:IconImage Icon="Square" Style="{StaticResource controlButtonIcon}" />
 
                         </Button>
                         <Button x:Name="btnMinimize" Style="{StaticResource controlButton}"
-                            Tag="{StaticResource color6}">
+                            Tag="{StaticResource color6}" Click="btnMinimize_Click">
                             <fa:IconImage Icon="WindowMinimize" Style="{StaticResource controlButtonIcon}" />
 
                         </Button>

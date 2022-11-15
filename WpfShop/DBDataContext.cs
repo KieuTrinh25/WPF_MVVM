@@ -144,7 +144,7 @@ namespace WpfShop
             OnCreated();
         }
 
-        [global::System.Data.Linq.Mapping.ColumnAttribute(Storage = "_Id", DbType = "Int NOT NULL", IsPrimaryKey = true)]
+        [global::System.Data.Linq.Mapping.ColumnAttribute(Storage = "_Id", AutoSync = AutoSync.OnInsert, DbType = "Int NOT NULL IDENTITY", IsPrimaryKey = true, IsDbGenerated = true)]
         public int Id
         {
             get
@@ -258,9 +258,13 @@ namespace WpfShop
 
         private int _Id;
 
+        private string _Name;
+
         private string _Phone;
 
         private string _Password;
+
+        private string _Role;
 
         private EntitySet<Order> _Orders;
 
@@ -270,10 +274,14 @@ namespace WpfShop
         partial void OnCreated();
         partial void OnIdChanging(int value);
         partial void OnIdChanged();
+        partial void OnNameChanging(string value);
+        partial void OnNameChanged();
         partial void OnPhoneChanging(string value);
         partial void OnPhoneChanged();
         partial void OnPasswordChanging(string value);
         partial void OnPasswordChanged();
+        partial void OnRoleChanging(string value);
+        partial void OnRoleChanged();
         #endregion
 
         public User()
@@ -282,7 +290,7 @@ namespace WpfShop
             OnCreated();
         }
 
-        [global::System.Data.Linq.Mapping.ColumnAttribute(Storage = "_Id", DbType = "Int NOT NULL", IsPrimaryKey = true)]
+        [global::System.Data.Linq.Mapping.ColumnAttribute(Storage = "_Id", AutoSync = AutoSync.OnInsert, DbType = "Int NOT NULL IDENTITY", IsPrimaryKey = true, IsDbGenerated = true)]
         public int Id
         {
             get
@@ -298,6 +306,26 @@ namespace WpfShop
                     this._Id = value;
                     this.SendPropertyChanged("Id");
                     this.OnIdChanged();
+                }
+            }
+        }
+
+        [global::System.Data.Linq.Mapping.ColumnAttribute(Storage = "_Name", DbType = "VarChar(50) NOT NULL", CanBeNull = false)]
+        public string Name
+        {
+            get
+            {
+                return this._Name;
+            }
+            set
+            {
+                if ((this._Name != value))
+                {
+                    this.OnNameChanging(value);
+                    this.SendPropertyChanging();
+                    this._Name = value;
+                    this.SendPropertyChanged("Name");
+                    this.OnNameChanged();
                 }
             }
         }
@@ -322,7 +350,7 @@ namespace WpfShop
             }
         }
 
-        [global::System.Data.Linq.Mapping.ColumnAttribute(Storage = "_Password", DbType = "NChar(10) NOT NULL", CanBeNull = false)]
+        [global::System.Data.Linq.Mapping.ColumnAttribute(Storage = "_Password", DbType = "NVarChar(50) NOT NULL", CanBeNull = false)]
         public string Password
         {
             get
@@ -338,6 +366,26 @@ namespace WpfShop
                     this._Password = value;
                     this.SendPropertyChanged("Password");
                     this.OnPasswordChanged();
+                }
+            }
+        }
+
+        [global::System.Data.Linq.Mapping.ColumnAttribute(Storage = "_Role", DbType = "NChar(10) NOT NULL", CanBeNull = false)]
+        public string Role
+        {
+            get
+            {
+                return this._Role;
+            }
+            set
+            {
+                if ((this._Role != value))
+                {
+                    this.OnRoleChanging(value);
+                    this.SendPropertyChanging();
+                    this._Role = value;
+                    this.SendPropertyChanged("Role");
+                    this.OnRoleChanged();
                 }
             }
         }
@@ -400,7 +448,7 @@ namespace WpfShop
 
         private string _Status;
 
-        private int _UserId;
+        private System.Nullable<int> _UserId;
 
         private EntityRef<User> _User;
 
@@ -414,7 +462,7 @@ namespace WpfShop
         partial void OnCodeChanged();
         partial void OnStatusChanging(string value);
         partial void OnStatusChanged();
-        partial void OnUserIdChanging(int value);
+        partial void OnUserIdChanging(System.Nullable<int> value);
         partial void OnUserIdChanged();
         #endregion
 
@@ -424,7 +472,7 @@ namespace WpfShop
             OnCreated();
         }
 
-        [global::System.Data.Linq.Mapping.ColumnAttribute(Storage = "_Id", DbType = "Int NOT NULL", IsPrimaryKey = true)]
+        [global::System.Data.Linq.Mapping.ColumnAttribute(Storage = "_Id", AutoSync = AutoSync.OnInsert, DbType = "Int NOT NULL IDENTITY", IsPrimaryKey = true, IsDbGenerated = true)]
         public int Id
         {
             get
@@ -444,7 +492,7 @@ namespace WpfShop
             }
         }
 
-        [global::System.Data.Linq.Mapping.ColumnAttribute(Storage = "_Code", DbType = "NChar(10) NOT NULL", CanBeNull = false)]
+        [global::System.Data.Linq.Mapping.ColumnAttribute(Storage = "_Code", DbType = "NChar(10)")]
         public string Code
         {
             get
@@ -464,7 +512,7 @@ namespace WpfShop
             }
         }
 
-        [global::System.Data.Linq.Mapping.ColumnAttribute(Storage = "_Status", DbType = "NChar(10) NOT NULL", CanBeNull = false)]
+        [global::System.Data.Linq.Mapping.ColumnAttribute(Storage = "_Status", DbType = "NChar(10)")]
         public string Status
         {
             get
@@ -484,8 +532,8 @@ namespace WpfShop
             }
         }
 
-        [global::System.Data.Linq.Mapping.ColumnAttribute(Storage = "_UserId", DbType = "Int NOT NULL")]
-        public int UserId
+        [global::System.Data.Linq.Mapping.ColumnAttribute(Storage = "_UserId", DbType = "Int")]
+        public System.Nullable<int> UserId
         {
             get
             {
@@ -535,7 +583,7 @@ namespace WpfShop
                     }
                     else
                     {
-                        this._UserId = default(int);
+                        this._UserId = default(Nullable<int>);
                     }
                     this.SendPropertyChanged("User");
                 }
@@ -603,7 +651,7 @@ namespace WpfShop
             OnCreated();
         }
 
-        [global::System.Data.Linq.Mapping.ColumnAttribute(Storage = "_Id", DbType = "Int NOT NULL", IsPrimaryKey = true)]
+        [global::System.Data.Linq.Mapping.ColumnAttribute(Storage = "_Id", AutoSync = AutoSync.OnInsert, DbType = "Int NOT NULL IDENTITY", IsPrimaryKey = true, IsDbGenerated = true)]
         public int Id
         {
             get
@@ -772,11 +820,13 @@ namespace WpfShop
 
         private string _Name;
 
-        private System.Nullable<int> _Quantity;
+        private decimal _Price;
 
-        private System.Nullable<decimal> _Price;
+        private int _Quantity;
 
-        private System.Nullable<int> _CategoryId;
+        private string _Description;
+
+        private int _CategoryId;
 
         private EntitySet<OrderDetail> _OrderDetails;
 
@@ -790,11 +840,13 @@ namespace WpfShop
         partial void OnIdChanged();
         partial void OnNameChanging(string value);
         partial void OnNameChanged();
-        partial void OnQuantityChanging(System.Nullable<int> value);
-        partial void OnQuantityChanged();
-        partial void OnPriceChanging(System.Nullable<decimal> value);
+        partial void OnPriceChanging(decimal value);
         partial void OnPriceChanged();
-        partial void OnCategoryIdChanging(System.Nullable<int> value);
+        partial void OnQuantityChanging(int value);
+        partial void OnQuantityChanged();
+        partial void OnDescriptionChanging(string value);
+        partial void OnDescriptionChanged();
+        partial void OnCategoryIdChanging(int value);
         partial void OnCategoryIdChanged();
         #endregion
 
@@ -805,7 +857,7 @@ namespace WpfShop
             OnCreated();
         }
 
-        [global::System.Data.Linq.Mapping.ColumnAttribute(Storage = "_Id", DbType = "Int NOT NULL", IsPrimaryKey = true)]
+        [global::System.Data.Linq.Mapping.ColumnAttribute(Storage = "_Id", AutoSync = AutoSync.OnInsert, DbType = "Int NOT NULL IDENTITY", IsPrimaryKey = true, IsDbGenerated = true)]
         public int Id
         {
             get
@@ -825,7 +877,7 @@ namespace WpfShop
             }
         }
 
-        [global::System.Data.Linq.Mapping.ColumnAttribute(Storage = "_Name", DbType = "NVarChar(20)")]
+        [global::System.Data.Linq.Mapping.ColumnAttribute(Storage = "_Name", DbType = "NVarChar(50) NOT NULL", CanBeNull = false)]
         public string Name
         {
             get
@@ -845,28 +897,8 @@ namespace WpfShop
             }
         }
 
-        [global::System.Data.Linq.Mapping.ColumnAttribute(Storage = "_Quantity", DbType = "Int")]
-        public System.Nullable<int> Quantity
-        {
-            get
-            {
-                return this._Quantity;
-            }
-            set
-            {
-                if ((this._Quantity != value))
-                {
-                    this.OnQuantityChanging(value);
-                    this.SendPropertyChanging();
-                    this._Quantity = value;
-                    this.SendPropertyChanged("Quantity");
-                    this.OnQuantityChanged();
-                }
-            }
-        }
-
-        [global::System.Data.Linq.Mapping.ColumnAttribute(Storage = "_Price", DbType = "Decimal(8,0)")]
-        public System.Nullable<decimal> Price
+        [global::System.Data.Linq.Mapping.ColumnAttribute(Storage = "_Price", DbType = "Decimal(8,0) NOT NULL")]
+        public decimal Price
         {
             get
             {
@@ -885,8 +917,48 @@ namespace WpfShop
             }
         }
 
-        [global::System.Data.Linq.Mapping.ColumnAttribute(Storage = "_CategoryId", DbType = "Int")]
-        public System.Nullable<int> CategoryId
+        [global::System.Data.Linq.Mapping.ColumnAttribute(Storage = "_Quantity", DbType = "Int NOT NULL")]
+        public int Quantity
+        {
+            get
+            {
+                return this._Quantity;
+            }
+            set
+            {
+                if ((this._Quantity != value))
+                {
+                    this.OnQuantityChanging(value);
+                    this.SendPropertyChanging();
+                    this._Quantity = value;
+                    this.SendPropertyChanged("Quantity");
+                    this.OnQuantityChanged();
+                }
+            }
+        }
+
+        [global::System.Data.Linq.Mapping.ColumnAttribute(Storage = "_Description", DbType = "NVarChar(1028) NOT NULL", CanBeNull = false)]
+        public string Description
+        {
+            get
+            {
+                return this._Description;
+            }
+            set
+            {
+                if ((this._Description != value))
+                {
+                    this.OnDescriptionChanging(value);
+                    this.SendPropertyChanging();
+                    this._Description = value;
+                    this.SendPropertyChanged("Description");
+                    this.OnDescriptionChanged();
+                }
+            }
+        }
+
+        [global::System.Data.Linq.Mapping.ColumnAttribute(Storage = "_CategoryId", DbType = "Int NOT NULL")]
+        public int CategoryId
         {
             get
             {
@@ -949,7 +1021,7 @@ namespace WpfShop
                     }
                     else
                     {
-                        this._CategoryId = default(Nullable<int>);
+                        this._CategoryId = default(int);
                     }
                     this.SendPropertyChanged("Category");
                 }

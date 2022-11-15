@@ -33,9 +33,13 @@ namespace WpfShop.Views
             if(e.LeftButton == MouseButtonState.Pressed)
                 DragMove();
         }
-        private void btnMinimize_Click(object sender, MouseButtonEventArgs e)
+        private void btnClose_Click(object sender, RoutedEventArgs e)
         {
-            WindowState = WindowState.Minimized;
+            Application.Current.Shutdown();
+        }
+        private void btnMinimize_Click(object sender, RoutedEventArgs e)
+        {
+            this.WindowState = WindowState.Minimized;
         }
     }
 }

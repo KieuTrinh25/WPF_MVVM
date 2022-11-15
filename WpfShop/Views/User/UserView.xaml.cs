@@ -24,5 +24,10 @@ namespace WpfShop.Views
         {
             InitializeComponent();
         }
+
+        private void textBoxSearch_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
     }
 }

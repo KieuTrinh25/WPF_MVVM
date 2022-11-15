@@ -13,8 +13,12 @@ namespace WpfShop.ViewModels
     public class LoginViewModel : ViewModelBase
     {
         public ICommand LoginCommand { get; }
+     
         private string _phone;
         private string _password;
+
+        private string _errorMessage;
+
         private bool _isErrorVisible = false;
 
         public LoginViewModel()
@@ -69,5 +73,19 @@ namespace WpfShop.ViewModels
                 OnPropertyChanged(nameof(IsErrorVisible));
             }
         }
+
+        public string ErrorMessage
+        {
+            get
+            {
+                return _errorMessage;
+            }
+            set
+            {
+                _errorMessage = value;
+                OnPropertyChanged(nameof(ErrorMessage));
+            }
+        }
+
     }
 }

@@ -52,7 +52,8 @@ namespace WpfShop.Data.Impl
             find.Name = Product.Name;
             find.Price = Product.Price;
             find.Quantity = Product.Quantity;
-            find.Category = Product.Category;
+            find.Description = Product.Description;
+            find.CategoryId = Product.CategoryId;
             db.SubmitChanges();
         }
     }

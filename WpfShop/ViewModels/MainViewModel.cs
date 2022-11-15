@@ -59,22 +59,32 @@ namespace WpfShop.ViewModels
         public MainViewModel()
         {
             ShowUserViewCommand = new ViewModelCommand(ExecuteShowUserViewCommand);
+            ShowProductViewCommand = new ViewModelCommand(ExecuteShowProductViewCommand);
+            ShowCategoryViewCommand = new ViewModelCommand(ExecuteShowCategoryViewCommand);
             //Default view
             ExecuteShowUserViewCommand(null);
+            ExecuteShowProductViewCommand(null);
+            ExecuteShowCategoryViewCommand(null);
 
         }
-        private void ExecuteShowUserViewCommand(object obj)
+        public void ExecuteShowUserViewCommand(object obj)
         {
             CurrentChildView = new UserViewModel(this);
             Caption = "Users";
             Icon = IconChar.User;
         }
 
-        private void ExecuteShowProductViewCommand(object obj)
+        public void ExecuteShowProductViewCommand(object obj)
         {
             CurrentChildView = new ProductViewModel(this);
             Caption = "Products";
             Icon = IconChar.ShoppingBag;
+        }
+        public void ExecuteShowCategoryViewCommand(object obj)
+        {
+            CurrentChildView = new CategoryViewModel(this);
+            Caption = "Categories";
+            Icon = IconChar.Box;
         }
     }
 }

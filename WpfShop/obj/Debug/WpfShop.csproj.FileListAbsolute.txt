@@ -29,10 +29,13 @@ c:\users\tranthanhbinh\documents\visual studio 2015\Projects\WpfShop\WpfShop\obj
 C:\Users\TranThanhBinh\documents\visual studio 2015\Projects\WpfShop\WpfShop\obj\Debug\WpfShop.csprojResolveAssemblyReference.cache
 C:\Users\PC\Downloads\WpfShop\WpfShop\obj\Debug\WpfShop.csproj.AssemblyReference.cache
 C:\Users\PC\Downloads\WpfShop\WpfShop\obj\Debug\WpfShop.csproj.SuggestedBindingRedirects.cache
+C:\Users\PC\Downloads\WpfShop\WpfShop\obj\Debug\Resources\MainResource.baml
 C:\Users\PC\Downloads\WpfShop\WpfShop\obj\Debug\Styles\ButtonStyles.baml
 C:\Users\PC\Downloads\WpfShop\WpfShop\obj\Debug\Styles\UIColors.baml
 C:\Users\PC\Downloads\WpfShop\WpfShop\obj\Debug\MainWindow.g.cs
-C:\Users\PC\Downloads\WpfShop\WpfShop\obj\Debug\Views\Login\LoginView.g.cs
+C:\Users\PC\Downloads\WpfShop\WpfShop\obj\Debug\Views\Order\CreateOrderView.g.cs
+C:\Users\PC\Downloads\WpfShop\WpfShop\obj\Debug\Views\Order\EditOrderView.g.cs
+C:\Users\PC\Downloads\WpfShop\WpfShop\obj\Debug\Views\Order\OrderView.g.cs
 C:\Users\PC\Downloads\WpfShop\WpfShop\obj\Debug\Views\Product\CreateProductView.g.cs
 C:\Users\PC\Downloads\WpfShop\WpfShop\obj\Debug\Views\Product\EditProductView.g.cs
 C:\Users\PC\Downloads\WpfShop\WpfShop\obj\Debug\Views\Product\ProductView.g.cs
@@ -48,6 +51,8 @@ C:\Users\PC\Downloads\WpfShop\WpfShop\bin\Debug\WpfShop.exe
 C:\Users\PC\Downloads\WpfShop\WpfShop\bin\Debug\WpfShop.pdb
 C:\Users\PC\Downloads\WpfShop\WpfShop\bin\Debug\Castle.Core.dll
 C:\Users\PC\Downloads\WpfShop\WpfShop\bin\Debug\FontAwesome.Sharp.dll
+C:\Users\PC\Downloads\WpfShop\WpfShop\bin\Debug\MahApps.Metro.IconPacks.Core.dll
+C:\Users\PC\Downloads\WpfShop\WpfShop\bin\Debug\MahApps.Metro.IconPacks.Material.dll
 C:\Users\PC\Downloads\WpfShop\WpfShop\bin\Debug\Mindbox.Data.Linq.dll
 C:\Users\PC\Downloads\WpfShop\WpfShop\bin\Debug\Mindbox.Expressions.dll
 C:\Users\PC\Downloads\WpfShop\WpfShop\bin\Debug\System.ComponentModel.Annotations.dll
@@ -56,16 +61,16 @@ C:\Users\PC\Downloads\WpfShop\WpfShop\bin\Debug\System.Security.AccessControl.dl
 C:\Users\PC\Downloads\WpfShop\WpfShop\bin\Debug\System.Security.Permissions.dll
 C:\Users\PC\Downloads\WpfShop\WpfShop\bin\Debug\System.Security.Principal.Windows.dll
 C:\Users\PC\Downloads\WpfShop\WpfShop\bin\Debug\Castle.Core.xml
+C:\Users\PC\Downloads\WpfShop\WpfShop\bin\Debug\MahApps.Metro.IconPacks.Core.pdb
+C:\Users\PC\Downloads\WpfShop\WpfShop\bin\Debug\MahApps.Metro.IconPacks.Core.xml
+C:\Users\PC\Downloads\WpfShop\WpfShop\bin\Debug\MahApps.Metro.IconPacks.Material.pdb
+C:\Users\PC\Downloads\WpfShop\WpfShop\bin\Debug\MahApps.Metro.IconPacks.Material.xml
 C:\Users\PC\Downloads\WpfShop\WpfShop\bin\Debug\System.Data.SqlClient.xml
 C:\Users\PC\Downloads\WpfShop\WpfShop\bin\Debug\System.Security.AccessControl.xml
 C:\Users\PC\Downloads\WpfShop\WpfShop\bin\Debug\System.Security.Permissions.xml
 C:\Users\PC\Downloads\WpfShop\WpfShop\bin\Debug\System.Security.Principal.Windows.xml
-C:\Users\PC\Downloads\WpfShop\WpfShop\obj\Debug\Views\Order\CreateOrderView.g.cs
-C:\Users\PC\Downloads\WpfShop\WpfShop\obj\Debug\Views\Order\EditOrderView.g.cs
-C:\Users\PC\Downloads\WpfShop\WpfShop\obj\Debug\Views\Order\OrderView.g.cs
 C:\Users\PC\Downloads\WpfShop\WpfShop\obj\Debug\App.baml
 C:\Users\PC\Downloads\WpfShop\WpfShop\obj\Debug\MainWindow.baml
-C:\Users\PC\Downloads\WpfShop\WpfShop\obj\Debug\Views\Login\LoginView.baml
 C:\Users\PC\Downloads\WpfShop\WpfShop\obj\Debug\Views\Order\CreateOrderView.baml
 C:\Users\PC\Downloads\WpfShop\WpfShop\obj\Debug\Views\Order\EditOrderView.baml
 C:\Users\PC\Downloads\WpfShop\WpfShop\obj\Debug\Views\Order\OrderView.baml
@@ -82,3 +87,11 @@ C:\Users\PC\Downloads\WpfShop\WpfShop\obj\Debug\WpfShop.csproj.CoreCompileInputs
 C:\Users\PC\Downloads\WpfShop\WpfShop\obj\Debug\WpfShop.csproj.CopyComplete
 C:\Users\PC\Downloads\WpfShop\WpfShop\obj\Debug\WpfShop.exe
 C:\Users\PC\Downloads\WpfShop\WpfShop\obj\Debug\WpfShop.pdb
+C:\Users\PC\Downloads\WpfShop\WpfShop\obj\Debug\Views\Category\CategoryView.g.cs
+C:\Users\PC\Downloads\WpfShop\WpfShop\obj\Debug\Views\Category\CreateCategoryView.g.cs
+C:\Users\PC\Downloads\WpfShop\WpfShop\obj\Debug\Views\Category\EditCategoryView.g.cs
+C:\Users\PC\Downloads\WpfShop\WpfShop\obj\Debug\Views\Login\LoginView.g.cs
+C:\Users\PC\Downloads\WpfShop\WpfShop\obj\Debug\Views\Category\CategoryView.baml
+C:\Users\PC\Downloads\WpfShop\WpfShop\obj\Debug\Views\Category\CreateCategoryView.baml
+C:\Users\PC\Downloads\WpfShop\WpfShop\obj\Debug\Views\Category\EditCategoryView.baml
+C:\Users\PC\Downloads\WpfShop\WpfShop\obj\Debug\Views\Login\LoginView.baml

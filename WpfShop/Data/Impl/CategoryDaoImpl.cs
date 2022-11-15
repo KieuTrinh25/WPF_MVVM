@@ -17,9 +17,8 @@ namespace WpfShop.Data.Impl
         }
         public int count()
         {
-            var query = from category in db.GetTable<Category>() select category;
-            List<Category> categoryList = query.ToList<Category>();
-            return categoryList.Count();
+            var CategoryList = (List<Category>)from Category in db.GetTable<Category>() select Category;
+            return CategoryList.Count();
         }
 
         public void deleteById(int id)
@@ -31,8 +30,8 @@ namespace WpfShop.Data.Impl
 
         public List<Category> findAll()
         {
-            var all = from category in db.GetTable<Category>() select category;
-            var categoryList = all.ToList();
+            var query = from Category in db.GetTable<Category>() select Category;
+            List<Category> categoryList = query.ToList<Category>();
             return categoryList;
         }
 
@@ -46,33 +45,12 @@ namespace WpfShop.Data.Impl
             db.Categories.InsertOnSubmit(category);
             db.SubmitChanges();
         }
-
-        public void insert(Dao.Category category)
-        {
-            throw new NotImplementedException();
-        }
-
         public void update(Category category)
         {
             Category find = db.Categories.Single(c => c.Id == category.Id);
             find.Name = category.Name;
             find.Description = category.Description;
             db.SubmitChanges();
-        }
-
-        public void update(Dao.Category category)
-        {
-            throw new NotImplementedException();
-        }
-
-        List<Dao.Category> CategoryDao.findAll()
-        {
-            throw new NotImplementedException();
-        }
-
-        Dao.Category CategoryDao.findById(int id)
-        {
-            throw new NotImplementedException();
         }
     }
 }

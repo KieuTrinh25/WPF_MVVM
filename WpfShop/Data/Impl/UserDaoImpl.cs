@@ -39,6 +39,7 @@ namespace WpfShop.Data.Impl
             catch (Exception ex) { }
             return null;
         }
+ 
 
         public List<User> findAll()
         {

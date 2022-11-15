@@ -11,7 +11,8 @@
         <viewModel:CreateUserViewModel />
     </UserControl.DataContext>
     <StackPanel Orientation="Vertical">
-        <TextBox Text="{Binding Email}"/>
+        <TextBox Text="{Binding Name}"/>
+        <TextBox Text="{Binding Phone}"/>
         <TextBox Text="{Binding Password}"/>
         <Button Command="{Binding CreateUserCommand}" Content="Submit"/>
     </StackPanel>

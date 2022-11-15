@@ -16,5 +16,6 @@ namespace WpfShop.Data.Dao
           void deleteById(int id);
 
           User find(string phone, string password);
+        //User find(string name, string phone, string password, string role);
     }
 }
